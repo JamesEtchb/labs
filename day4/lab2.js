@@ -8,3 +8,10 @@ for (let i = 0; i < num.length; i++){
 }
 
 console.log(sum)
+
+const arr = [14, 4, 11, 13, 66, 10];
+let sum1 = 0
+for(const value of arr) {
+    sum1 += value; // sum = sum + value
+}
+console.log(`the sum is ${sum1}`);
