@@ -10,22 +10,24 @@ let shoppingList = [
   "ham",
   "cheese",
   "mayo",
-  "mustard"
+  "mustard",
 ]
 let cart = ["milk", "bread", "cheese", "mustard"]
 let finalList = []
 
-let buyIt = (shoppingList, cart) => {
-  for (let i = 0; i < shoppingList.length; i++) {
-    for (let j = o; j < cart.length; j++) {
-        if (i==j){
-           return finalList.push(j)
-        }
+for (let i = 0; i < shoppingList.length; i++) {
+  let shoppingListItem = shoppingList[i]
+  let foundInCart = false
+  for (let j = 0; j < cart.length; j++){
+    let cartItem = cart[j]
+    if (shoppingListItem === cartItem){
+      foundInCart = true
     }
+  }
+    if (!foundInCart){
+    finalList.push(shoppingListItem)
   }
 }
 
-console.log(finalList)
 
-// list = shoppingList.filter(val => !cart.includes(val));
-// console.log(list)
+console.log(finalList)
