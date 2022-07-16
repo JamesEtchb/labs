@@ -16,5 +16,5 @@ let fizzBuzz = (num) => {
   }
 }
 
-console.log(fizzBuzz(100))
+fizzBuzz(100)
 
